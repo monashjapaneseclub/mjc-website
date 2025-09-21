@@ -22,7 +22,6 @@ export default function Header({
         { name: "Events", link: "/events" },
         { name: "Sponsors", link: "/sponsors" },
         { name: "Links", link: "/links" },
-        { name: "Ball", link: "/ball" },
         { name: "Contact Us", link: "/enquiry" },
       ],
       jp: [
@@ -32,7 +31,6 @@ export default function Header({
         { name: "イベント", link: "/events" },
         { name: "スポンサー", link: "/sponsors" },
         { name: "リンク集", link: "/links" },
-        { name: "千灯祭", link: "/ball" },
         { name: "お問い合わせ", link: "/enquiry" },
       ],
     },
