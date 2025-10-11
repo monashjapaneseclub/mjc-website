@@ -32,9 +32,15 @@ const LinksPage: React.FC = () => {
 
   const links = [
     {
-     title_en: "SAMA Matsuri x MJC Ichiba",
-      title_jp: "SAMA Matsuri x MJC Ichiba",
-      url: "https://www.eventbrite.com.au/e/sama-matsuri-x-mjc-ichiba-tickets-61405429292?aff=oddtdtcreator",
+     title_en: "ACYA x MJC Calligraphy Night",
+      title_jp: "ACYA x MJC Calligraphy Night",
+      url: "https://docs.google.com/forms/d/e/1FAIpQLSc7DQK1mC1za2fZFTfZ_vgWABLTZDg0absTQN5JeWNZQYMTDg/viewform",
+      icon: <BsTicketDetailed className="text-2xl" />,
+    },
+    {
+     title_en: "Halloween Movie Night",
+      title_jp: "Halloween Movie Night",
+      url: "https://www.eventbrite.com.au/e/movie-night-tickets-1728960450249?aff=oddtdtcreator",
       icon: <BsTicketDetailed className="text-2xl" />,
     },
     {
