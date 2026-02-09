@@ -137,7 +137,7 @@ const roles: RoleDetails[] = [
       en: "Oversees the club's technology infrastructure and leads the development and maintenance of the club's website.",
       jp: "クラブの技術基盤を監督し、ウェブサイトの開発と維持を主導します。",
     },
-    linkedin: "https://www.linkedin.com/in/matthewwyau",
+    linkedin: "https://www.linkedin.com/in/jin-heng-pang",
   },
 ];
 
