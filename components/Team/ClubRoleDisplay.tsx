@@ -6,7 +6,6 @@ type RoleDetails = {
   role: { en: string; jp: string };
   name: { en: string; jp: string };
   degree: { en: string; jp: string; studyAbroad?: { en: string; jp: string } };
-  imageUrl: string;
   description: { en: string; jp: string };
   linkedin?: string;
 };
@@ -14,100 +13,23 @@ type RoleDetails = {
 const roles: RoleDetails[] = [
   {
     role: { en: "President", jp: "会長" },
-    name: { en: "Eugene Wang", jp: "ユージン・ワン" },
+    name: { en: "Sara Ando", jp: "安藤紗楽" },
     degree: {
-      en: "Degrees: Laws (Honours), Commerce, and Diploma of Languages (Japanese)",
-      jp: "専攻: 法学（優等）、商学、言語学ディプロマ（日本語）",
+      en: "Degrees: Secondary and Primary Education (Special and Inclusive Education)",
+      jp: "専攻: 中等と初等教育（特別支援教育とインクルーシブ教育）",
     },
-    imageUrl: "/images/com/eugene.png",
     description: {
-      en: "Oversees the club's operations and ensures its success by providing leadership and vision.",
-      jp: "クラブの運営を監督し、リーダーシップとビジョンを提供して成功を確実にします。",
+      en: "Organizes workshops, training, and educational resources for members.",
+      jp: "メンバー向けにワークショップ、トレーニング、と教育リソースを企画します。",
     },
-    linkedin: "https://www.linkedin.com/in/eugene-wang-7aaa69138/",
   },
   {
     role: { en: "Vice President", jp: "副会長" },
-    name: { en: "Ain Mohiddin", jp: "アン・モヒディン" },
-    degree: {
-      en: "Degrees: Laws (Honours) and Commerce",
-      jp: "専攻: 法学（優等）と商学",
-    },
-    imageUrl: "/images/com/ain.png",
-    description: {
-      en: "Assists the president and takes over their duties when necessary. Coordinates with all departments.",
-      jp: "会長を補佐し、必要に応じてその職務を引き継ぎます。全ての部署と調整します。",
-    },
-    linkedin: "https://www.linkedin.com/in/ain-mohiddin-1a3462216/",
-  },
-  {
-    role: { en: "Treasurer", jp: "会計担当" },
-    name: { en: "Yanling Chen", jp: "ヤンリン・チェン" },
-    degree: {
-      en: "Degrees: Commerce and Biomedical Science",
-      jp: "専攻: 商学と生物医学科学",
-    },
-    imageUrl: "/images/place-holder.png",
-    description: {
-      en: "Handles all financial matters, including budgets, expenses, and financial reporting.",
-      jp: "予算、費用、財務報告など、全ての財務問題を処理します。",
-    },
-    linkedin: "https://www.linkedin.com/in/yanling-chen-5723a6262/",
-  },
-  {
-    role: { en: "Assistant Treasurer", jp: "会計補佐" },
-    name: { en: "Max Ramsay", jp: "マックス・ラムゼイ" },
-    degree: {
-      en: "Degrees: Commerce and Diploma of Languages (Japanese)",
-      jp: "専攻: 商学と言語学ディプロマ（日本語）",
-      studyAbroad: {
-        en: "Exchange Semester: Hitotsubashi University",
-        jp: "留学先: 一橋大学",
-      },
-    },
-    imageUrl: "/images/com/max.png",
-    description: {
-      en: "Assists the treasurer with financial tasks and ensures records are accurate.",
-      jp: "会計担当を補佐し、財務タスクをサポートし、記録の正確性を確保します。",
-    },
-    linkedin: "https://www.linkedin.com/in/max-ramsay-19568523a/",
-  },
-  {
-    role: { en: "Secretary", jp: "書記" },
-    name: { en: "Lin Nakayama", jp: "中山凛音" },
-    degree: {
-      en: "Degree: Science",
-      jp: "専攻: 理学",
-    },
-    imageUrl: "/images/place-holder.png",
-    description: {
-      en: "Takes minutes during meetings, manages correspondence, and maintains club records.",
-      jp: "会議中の議事録を取り、通信を管理し、クラブの記録を維持します。",
-    },
-    linkedin: "https://www.linkedin.com/in/lin-nakayama-51525829a/",
-  },
-  {
-    role: { en: "Marketing Director", jp: "マーケティング担当" },
-    name: { en: "Chinatsu Kanasaka", jp: "金坂知夏" },
-    degree: {
-      en: "Degrees: Secondary Education and Arts",
-      jp: "専攻: 中等教育と文学",
-    },
-    imageUrl: "/images/com/chinatsu.png",
-    description: {
-      en: "Develops marketing strategies to increase club visibility and engagement.",
-      jp: "クラブの認知度と参加を高めるためのマーケティング戦略を策定します。",
-    },
-    linkedin: "https://www.linkedin.com/in/chinatsu-kanasaka/",
-  },
-  {
-    role: { en: "Events Director", jp: "イベント担当" },
     name: { en: "Teruki Yamashita", jp: "山下照生" },
     degree: {
       en: "Degrees: Radiography and Medical Imaging",
       jp: "専攻: 放射線撮影と医療画像学",
     },
-    imageUrl: "/images/com/teruki.png",
     description: {
       en: "Organizes and coordinates events, ensuring they run smoothly.",
       jp: "イベントを企画し、調整してスムーズに進行するようにします。",
@@ -115,13 +37,77 @@ const roles: RoleDetails[] = [
     linkedin: "https://www.linkedin.com/in/teruki-yamashita-4284a0278/",
   },
   {
-    role: { en: "Sponsorship Director", jp: "スポンサーシップ担当" },
+    role: { en: "Treasurer", jp: "会計担当" },
     name: { en: "Konon Kuboi", jp: "久保井このん" },
     degree: {
       en: "Degrees: Arts and Global Studies",
       jp: "専攻: 文学と国際学",
     },
-    imageUrl: "/images/com/konon.png",
+    description: {
+      en: "Establishes partnerships and secures resources for club activities.",
+      jp: "パートナーシップを築き、クラブ活動のための資源を確保します。",
+    },
+    linkedin: "https://www.linkedin.com/in/konon-kuboi-5a40a7295/",
+  },
+  {
+    role: { en: "Assistant Treasurer", jp: "会計補佐" },
+    name: { en: "Lin Nakayama", jp: "中山凛音" },
+    degree: {
+      en: "Degrees: Science",
+      jp: "専攻: 理学",
+    },
+    description: {
+      en: "Takes minutes during meetings, manages correspondence, and maintains club records.",
+      jp: "会議中の議事録を取り、通信を管理し、クラブの記録を維持します。",
+    },
+    linkedin: "https://www.linkedin.com/in/lin-nakayama-51525829a/",
+  },
+  {
+    role: { en: "Secretary", jp: "書記" },
+    name: { en: "Chinatsu Kanasaka", jp: "金坂知夏" },
+    degree: {
+      en: "Degrees: Secondary Education and Arts",
+      jp: "専攻: 中等教育と文学",
+    },
+    description: {
+      en: "Develops marketing strategies to increase club visibility and engagement.",
+      jp: "クラブの認知度と参加を高めるためのマーケティング戦略を策定します。",
+    },
+    linkedin: "https://www.linkedin.com/in/chinatsu-kanasaka/",
+  },
+  {
+    role: { en: "Marketing Director", jp: "マーケティング担当" },
+    name: { en: "Akihiro Kobayashi", jp: "小林　士洸" },
+    degree: {
+      en: "Degrees: Arts and Global Studies",
+      jp: "専攻: 文学士（アーツ）・グローバルスタディーズ学士",
+    },
+    description: {
+      en: "Develops marketing strategies to increase club visibility and engagement.",
+      jp: "クラブの認知度と参加を高めるためのマーケティング戦略を策定します。",
+    },
+    linkedin: "https://www.linkedin.com/in/akihiro-kobayashi-78783937b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  },
+  {
+    role: { en: "Events Director", jp: "イベント担当" },
+    name: { en: "Hugo Mukai", jp: "迎　彪剛" },
+    degree: {
+      en: "Degrees: Engineering - Software Engineering (Honours)",
+      jp: "専攻: 工学（優等）",
+    },
+    description: {
+      en: "Organizes and coordinates events, ensuring they run smoothly.",
+      jp: "イベントを企画し、調整してスムーズに進行するようにします。",
+    },
+    linkedin: "https://www.linkedin.com/in/hugo-mukai-b7220635a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  },
+  {
+    role: { en: "Sponsorship Director", jp: "スポンサーシップ担当" },
+    name: { en: "Shuya Ooka", jp: "大岡　修也" },
+    degree: {
+      en: "Degrees: Law (Honours) and Commerce (Finance)",
+      jp: "専攻: 法律・ファイナンス",
+    },
     description: {
       en: "Establishes partnerships and secures resources for club activities.",
       jp: "パートナーシップを築き、クラブ活動のための資源を確保します。",
@@ -130,12 +116,11 @@ const roles: RoleDetails[] = [
   },
   {
     role: { en: "Education Director", jp: "教育担当" },
-    name: { en: "Sara Ando", jp: "安藤紗楽" },
+    name: { en: "Chihana Perera", jp: "" },
     degree: {
-      en: "Degrees: Secondary and Primary Education (Special and Inclusive Education)",
-      jp: "専攻: 中等と初等教育（特別支援教育とインクルーシブ教育）",
+      en: "Degrees: Education",
+      jp: "専攻: 教育学",
     },
-    imageUrl: "/images/com/sara.png",
     description: {
       en: "Organizes workshops, training, and educational resources for members.",
       jp: "メンバー向けにワークショップ、トレーニング、と教育リソースを企画します。",
@@ -143,16 +128,11 @@ const roles: RoleDetails[] = [
   },
   {
     role: { en: "IT Director", jp: "IT担当" },
-    name: { en: "Matthew Yau", jp: "マシュー・ヤウ" },
+    name: { en: "Jin Heng Pang", jp: "パング・ジンヘン" },
     degree: {
-      en: "Degrees: Commerce, Computer Science, and Diploma of Languages (Japanese)",
-      jp: "専攻: 商学、コンピュータサイエンス、言語学ディプロマ（日本語）",
-      studyAbroad: {
-        en: "Exchange Semester: The University of Tokyo",
-        jp: "留学先: 東京大学",
-      },
+      en: "Degrees: Computer Science",
+      jp: "専攻: コンピュータサイエンス",
     },
-    imageUrl: "/images/com/matt.jpg",
     description: {
       en: "Oversees the club's technology infrastructure and leads the development and maintenance of the club's website.",
       jp: "クラブの技術基盤を監督し、ウェブサイトの開発と維持を主導します。",
@@ -175,7 +155,7 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
     <div className="flex flex-col w-full p-4 -mt-12 sm:-mt-24">
       {/* Title Header */}
       <h1 className="text-3xl font-bold text-center mb-8">
-        {language === "en" ? "2025 Executive Committee" : "2025年度役員委員会"}
+        {language === "en" ? "2026 Executive Committee" : "2026年度役員委員会"}
       </h1>
       {/* Mobile Role Selection Dropdown */}
       <div className="block md:hidden mb-6">
@@ -217,19 +197,8 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
 
         {/* Content Section */}
         <div className="flex flex-col md:flex-row flex-1 gap-8">
-          {/* Image */}
-          <div className="flex-shrink-0 md:w-72 md:h-72">
-            <img
-              src={selectedRole.imageUrl}
-              alt={`${selectedRole.role.en} portrait`}
-              className="w-80 h-80 md:w-72 md:h-72 object-cover rounded-sm bg-white p-4 shadow-lg border border-gray-300"
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-            />
-          </div>
-
-          {/* Text Content */}
-          <div className="flex-1">
+            {/* Text Content */}
+            <div className="flex-1">
             <h3 className="text-xl font-semibold text-gray-800">
               {language === "en" ? selectedRole.role.en : selectedRole.role.jp}
             </h3>
