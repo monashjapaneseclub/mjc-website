@@ -278,6 +278,47 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
 
           {/* Committees Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* 2025 */}
+            <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-center">2025</h3>
+              <ul className="text-gray-700">
+                <li>
+                  <span className="font-semibold">President:</span> Eugene Wang
+                </li>
+                <li>
+                  <span className="font-semibold">Vice President:</span> Ain Mohiddin
+                </li>
+                <li>
+                  <span className="font-semibold">Treasurer:</span> Yanling Chen
+                </li>
+                <li>
+                  <span className="font-semibold">Secretary:</span> Lin Nakayama
+                </li>
+                <li>
+                  <span className="font-semibold">Assistant Treasurer:</span>{" "}
+                  Max Ramsay
+                </li>
+                <li>
+                  <span className="font-semibold">Marketing Director:</span>{" "}
+                  Chinatsu Kanasaka
+                </li>
+                <li>
+                  <span className="font-semibold">Events Director:</span> Teruki Yamashita
+                </li>
+                <li>
+                  <span className="font-semibold">Education Director:</span>{" "}
+                  Sara Ando
+                </li>
+                <li>
+                  <span className="font-semibold">Sponsorship Director:</span>{" "}
+                  Konon Kuboi
+                </li>
+                <li>
+                  <span className="font-semibold">IT Director:</span> Matthew Yau
+                </li>
+              </ul>
+            </div>
+
             {/* 2024 */}
             <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
               <h3 className="text-xl font-bold mb-4 text-center">2024</h3>
