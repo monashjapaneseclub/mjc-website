@@ -116,15 +116,16 @@ const roles: RoleDetails[] = [
   },
   {
     role: { en: "Education Director", jp: "教育担当" },
-    name: { en: "Chihana Perera", jp: "" },
+    name: { en: "Chihana Perera", jp: "ペレラ・チハナ" },
     degree: {
-      en: "Degrees: Education",
-      jp: "専攻: 教育学",
+      en: "Degrees: Science and Music",
+      jp: "専攻: 理学と音楽",
     },
     description: {
       en: "Organizes workshops, training, and educational resources for members.",
       jp: "メンバー向けにワークショップ、トレーニング、と教育リソースを企画します。",
     },
+    linkedin: "http://www.linkedin.com/in/chihana-perera-3740663b1",
   },
   {
     role: { en: "IT Director", jp: "IT担当" },
