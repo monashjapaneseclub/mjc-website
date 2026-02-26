@@ -130,10 +130,10 @@ const Sponsors: React.FC<{ language: "en" | "jp" }> = ({ language }) => {
         </p>
       </div>
 
-      {/* 2025 Sponsors Heading */}
+      {/* 2026 Sponsors Heading */}
       <div className="flex flex-col items-center bg-[#f8fafc] py-10 px-4">
         <h1 className="text-3xl font-bold">
-          {language === "en" ? "2025 Sponsors" : "２０２５年のスポンサー"}
+          {language === "en" ? "2026 Sponsors" : "２０２５年のスポンサー"}
         </h1>
       </div>
 
