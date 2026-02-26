@@ -38,6 +38,18 @@ const LinksPage: React.FC = () => {
     //   icon: <BsTicketDetailed className="text-2xl" />,
     // },
     {
+      title_en: "Yakisoba Night - 11/3/2026",
+      title_jp: "焼きそばナイト",
+      url: "https://forms.gle/omJXpFnGZVnHUXax6",
+      icon: <FaStar className="text-2xl" />,
+    },
+    {
+      title_en: "Committee Sign-up",
+      title_jp: "委員会登録",
+      url: "https://forms.gle/zsD6Jy3tKp4HuuGdA",
+      icon: <FaStar className="text-2xl" />,
+    },
+    {
       title_en: "Club Sign-up",
       title_jp: "クラブ登録",
       url: "https://clubs.msa.monash.edu/organisation/7786/",
