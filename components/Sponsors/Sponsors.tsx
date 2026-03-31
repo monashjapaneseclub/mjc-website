@@ -1,7 +1,72 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { sponsors } from "@/data/sponsors";
+
+const sponsors = [
+  {
+    image: "/images/sponsors/japaneasy.png",
+    name: "Japaneasy",
+    link: "https://japaneasy.com.au/",
+  },
+  {
+    image: "/images/sponsors/chahaus.png",
+    name: "Cha Haus",
+    link: "https://chahaus.com/",
+    caption: "10% discount",
+  },
+  {
+    image: "/images/sponsors/freedatenight.png",
+    name: "Another Date Night",
+    link: "https://anotherdatenight.com/",
+    caption: "20% discount",
+  },
+  {
+    image: "/images/sponsors/kbox.png",
+    name: "KBox Karaoke",
+    link: "https://kbox.com.au/",
+    caption: "5% discount",
+  },
+  {
+    image: "/images/sponsors/hareruya.png",
+    name: "Hareruya Pantry",
+    link: "https://hareruya.com.au/",
+    caption: "Discount Vouchers",
+  },
+  {
+    image: "/images/sponsors/madeinjapan.png",
+    name: "Made in Japan",
+    link: "https://mij.com.au/",
+    caption: "20% discount",
+  },
+  {
+    image: "/images/sponsors/koori.png",
+    name: "Kori",
+    link: "https://www.kori-icecream.com.au/",
+    caption: "2 for 1 vouchers",
+  },
+  {
+    image: "/images/sponsors/itoen.png",
+    name: "Ito En",
+    link: "https://itoen.com.au/",
+  },
+  {
+    image: "/images/sponsors/ediblecutlery.png",
+    name: "Edible Cutlery",
+    link: "https://ediblecutlery.au/",
+  },
+  {
+    image: "/images/sponsors/cubetown.png",
+    name: "Cubetown",
+    link: "https://cubetown.com.au/",
+    caption: "10% discount",
+  },
+  {
+    image: "/images/sponsors/yappari_steak.png",
+    name: "Yappari Steak",
+    link: "https://www.instagram.com/yappari_steak_mel_central/?hl=en",
+    caption: "15% discount",
+  }
+];
 
 const newestSponsor = sponsors[sponsors.length - 1];
 
@@ -68,7 +133,7 @@ const Sponsors: React.FC<{ language: "en" | "jp" }> = ({ language }) => {
       {/* 2026 Sponsors Heading */}
       <div className="flex flex-col items-center bg-[#f8fafc] py-10 px-4">
         <h1 className="text-3xl font-bold">
-          {language === "en" ? "2026 Sponsors" : "２０２５年のスポンサー"}
+          {language === "en" ? "2026 Sponsors" : "２０２6年のスポンサー"}
         </h1>
       </div>
 
