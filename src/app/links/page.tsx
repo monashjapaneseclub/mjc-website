@@ -38,15 +38,9 @@ const LinksPage: React.FC = () => {
     //   icon: <BsTicketDetailed className="text-2xl" />,
     // },
     {
-      title_en: "Yakisoba Night - 11/3/2026",
-      title_jp: "焼きそばナイト",
-      url: "https://forms.gle/omJXpFnGZVnHUXax6",
-      icon: <FaStar className="text-2xl" />,
-    },
-    {
-      title_en: "Committee Sign-up",
-      title_jp: "委員会登録",
-      url: "https://forms.gle/zsD6Jy3tKp4HuuGdA",
+      title_en: "Dodgeball",
+      title_jp: "",
+      url: "https://l.facebook.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSfKRE3H_Y2s2Sju_8hcdJKD7oMrzDpEPC7jx6oJdeNYHSyA4A%2Fviewform%3Fusp%3Dpublish-editor%26fbclid%3DIwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNDM3NjI2MzE2OTczNzg4AAEeo6E7IVSOkiffHN_J1Qw7-9xSFETUk8BOB0KnJnCC3EhfuqOzK9-RWsnvxx0_aem_QFYZKD5PKKWusE5L05UFFg&h=AT6KIVTNUAEqbeMG7q2X03F9ufTTOUuc84AlKOs8EeRXWOtN7uUdGkxhKB3Pdh_eCschzBVtIJ02KLud8F6ZlrwcRAHc4eKGWErWdzYZcUdPmlieNrqFkL7dEBbhK_k&s=1",
       icon: <FaStar className="text-2xl" />,
     },
     {
