@@ -23,7 +23,7 @@ export const sponsors: Sponsor[] = [
     link: "https://itoen.com.au/",
   },
   {
-    image: "/images/sponsors/freedatenight.png",
+    image: "/images/sponsors/anotherdatenight.png",
     name: "AnotherDateNight",
     link: "https://anotherdatenight.com/",
     caption: "20% member discount (Code: MJS@20%)",
@@ -35,7 +35,7 @@ export const sponsors: Sponsor[] = [
     caption: "5% discount Sun\u2013Fri at Kbox Bar City",
   },
   {
-    image: "/images/sponsors/koori.png",
+    image: "/images/sponsors/kori.png",
     name: "Kori",
     link: "https://www.kori-icecream.com.au/",
     caption: "2 for 1 vouchers",
@@ -70,19 +70,19 @@ export const sponsors: Sponsor[] = [
     caption: "10% off gaming sessions for members",
   },
   {
-    image: "/images/sponsors/yappari_steak.png",
+    image: "/images/sponsors/yapparisteak.png",
     name: "Yappari Steak",
     link: "https://www.instagram.com/yappari_steak_mel_central/?hl=en",
     caption: "15% discount for members",
   },
   {
-    image: "/images/sponsors/izumi_massage.jpg",
+    image: "/images/sponsors/izumi.png",
     name: "Izumi Japanese Massage",
     link: "https://www.izumimassage.com.au/",
     caption: "5% off all treatments",
   },
   {
-    image: "/images/sponsors/sharetea.jpg",
+    image: "/images/sponsors/sharetea.png",
     name: "ShareTea",
     link: "https://www.sharetea.com.au/",
     caption: "15% off South Melbourne & Clayton stores",

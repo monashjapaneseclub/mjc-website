@@ -31,12 +31,6 @@ const LinksPage: React.FC = () => {
   }, []);
 
   const links = [
-    // {
-    //  title_en: "ACYA x MJC Calligraphy Night",
-    //   title_jp: "ACYA x MJC Calligraphy Night",
-    //   url: "https://docs.google.com/forms/d/e/1FAIpQLSc7DQK1mC1za2fZFTfZ_vgWABLTZDg0absTQN5JeWNZQYMTDg/viewform",
-    //   icon: <BsTicketDetailed className="text-2xl" />,
-    // },
     {
       title_en: "Dodgeball",
       title_jp: "",

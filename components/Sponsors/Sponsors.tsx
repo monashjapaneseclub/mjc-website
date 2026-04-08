@@ -15,7 +15,7 @@ const sponsors = [
     caption: "10% discount",
   },
   {
-    image: "/images/sponsors/freedatenight.png",
+    image: "/images/sponsors/anotherdatenight.png",
     name: "Another Date Night",
     link: "https://anotherdatenight.com/",
     caption: "20% discount",
@@ -39,7 +39,7 @@ const sponsors = [
     caption: "20% discount",
   },
   {
-    image: "/images/sponsors/koori.png",
+    image: "/images/sponsors/kori.png",
     name: "Kori",
     link: "https://www.kori-icecream.com.au/",
     caption: "2 for 1 vouchers",
@@ -61,7 +61,7 @@ const sponsors = [
     caption: "10% discount",
   },
   {
-    image: "/images/sponsors/yappari_steak.png",
+    image: "/images/sponsors/yapparisteak.png",
     name: "Yappari Steak",
     link: "https://www.instagram.com/yappari_steak_mel_central/?hl=en",
     caption: "15% discount",
