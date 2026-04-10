@@ -1,135 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-
-const sponsors = [
-  {
-    image: "/images/sponsors/japaneasy.png",
-    name: "Japaneasy",
-    link: "https://japaneasy.com.au/",
-  },
-  {
-    image: "/images/sponsors/chahaus.png",
-    name: "Cha Haus",
-    link: "https://chahaus.com/",
-    caption: "10% discount",
-  },
-  {
-    image: "/images/sponsors/anotherdatenight.png",
-    name: "Another Date Night",
-    link: "https://anotherdatenight.com/",
-    caption: "20% discount",
-  },
-  {
-    image: "/images/sponsors/kbox.png",
-    name: "KBox Karaoke",
-    link: "https://kbox.com.au/",
-    caption: "5% discount",
-  },
-  {
-    image: "/images/sponsors/hareruya.png",
-    name: "Hareruya Pantry",
-    link: "https://hareruya.com.au/",
-    caption: "Discount Vouchers",
-  },
-  {
-    image: "/images/sponsors/madeinjapan.png",
-    name: "Made in Japan",
-    link: "https://mij.com.au/",
-    caption: "20% discount",
-  },
-  {
-    image: "/images/sponsors/kori.png",
-    name: "Kori",
-    link: "https://www.kori-icecream.com.au/",
-    caption: "2 for 1 vouchers",
-  },
-  {
-    image: "/images/sponsors/itoen.png",
-    name: "Ito En",
-    link: "https://itoen.com.au/",
-  },
-  {
-    image: "/images/sponsors/ediblecutlery.png",
-    name: "Edible Cutlery",
-    link: "https://ediblecutlery.au/",
-  },
-  {
-    image: "/images/sponsors/cubetown.png",
-    name: "Cubetown",
-    link: "https://cubetown.com.au/",
-    caption: "10% discount",
-  },
-  {
-    image: "/images/sponsors/yapparisteak.png",
-    name: "Yappari Steak",
-    link: "https://www.instagram.com/yappari_steak_mel_central/?hl=en",
-    caption: "15% discount",
-  }
-];
-
-const newestSponsor = sponsors[sponsors.length - 1];
+import React from "react";
+import { sponsors } from "@/data/sponsors";
 
 const Sponsors: React.FC<{ language: "en" | "jp" }> = ({ language }) => {
-  const [showNewSponsor, setShowNewSponsor] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowNewSponsor(true);
-    }, 300);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <main className="w-full bg-[#f8fafc] flex flex-col items-center py-10 px-4">
-      {/* Newest Sponsor Highlight Section */}
-      <div className="w-full flex flex-col items-center text-center">
-        <h1 className="text-3xl font-bold mb-6">
-          {language === "en"
-            ? "MJC Welcomes Our Newest Sponsor!"
-            : "MJCは最新のスポンサーを歓迎します"}
-        </h1>
-
-        <div className="flex items-center gap-6 justify-center flex-wrap">
-          <img
-            src="/images/mjc_old.png"
-            alt="MJC Logo"
-            className="w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 min-w-[8rem] min-h-[8rem] object-contain shrink-0"
-          />
-          <span className="text-5xl font-bold text-gray-500">×</span>
-          <a
-            href={newestSponsor.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`transition-opacity duration-1000 ${
-              showNewSponsor ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <img
-              src={newestSponsor.image}
-              alt={newestSponsor.name}
-              className="w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 min-w-[8rem] min-h-[8rem] object-contain rounded-xl shrink-0"
-            />
-          </a>
-        </div>
-
-        <a
-          href={newestSponsor.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 text-2xl font-semibold text-blue-700 hover:underline"
-        >
-          {newestSponsor.name}
-        </a>
-        <p className="text-gray-600 mt-1">
-          {newestSponsor.caption
-            ? newestSponsor.caption
-            : language === "en"
-            ? "Supports club operations"
-            : "クラブの運営をサポートします"}
-        </p>
-      </div>
-
       {/* 2026 Sponsors Heading */}
       <div className="flex flex-col items-center bg-[#f8fafc] py-10 px-4">
         <h1 className="text-3xl font-bold">
@@ -144,11 +20,6 @@ const Sponsors: React.FC<{ language: "en" | "jp" }> = ({ language }) => {
             key={index}
             className="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center h-auto min-h-[20rem] sm:h-80 justify-between relative"
           >
-            {sponsor.name === newestSponsor.name && (
-              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
-                NEW!
-              </span>
-            )}
             <img
               src={sponsor.image}
               alt={sponsor.name}
