@@ -32,9 +32,21 @@ const LinksPage: React.FC = () => {
 
   const links = [
     {
-      title_en: "Dodgeball",
+      title_en: "Matcha Workshop SESSION 1 (16:00-17:00)",
       title_jp: "",
-      url: "https://l.facebook.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSfKRE3H_Y2s2Sju_8hcdJKD7oMrzDpEPC7jx6oJdeNYHSyA4A%2Fviewform%3Fusp%3Dpublish-editor%26fbclid%3DIwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNDM3NjI2MzE2OTczNzg4AAEeo6E7IVSOkiffHN_J1Qw7-9xSFETUk8BOB0KnJnCC3EhfuqOzK9-RWsnvxx0_aem_QFYZKD5PKKWusE5L05UFFg&h=AT6KIVTNUAEqbeMG7q2X03F9ufTTOUuc84AlKOs8EeRXWOtN7uUdGkxhKB3Pdh_eCschzBVtIJ02KLud8F6ZlrwcRAHc4eKGWErWdzYZcUdPmlieNrqFkL7dEBbhK_k&s=1",
+      url: "https://www.eventbrite.com.au/e/1987595968045?aff=oddtdtcreator",
+      icon: <FaStar className="text-2xl" />,
+    },
+    {
+      title_en: "Matcha Workshop SESSION 2 (17:30-18:30)",
+      title_jp: "",
+      url: "https://www.eventbrite.com.au/e/1987597004144?aff=oddtdtcreator",
+      icon: <FaStar className="text-2xl" />,
+    },
+    {
+      title_en: "Matcha Workshop SESSION 3 (19:00-20:00)",
+      title_jp: "",
+      url: "https://www.eventbrite.com.au/e/1987597286990?aff=oddtdtcreator",
       icon: <FaStar className="text-2xl" />,
     },
     {
