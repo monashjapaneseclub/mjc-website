@@ -34,7 +34,7 @@ const LinksPage: React.FC = () => {
     {
       title_en: "MJC Nomikai - 13/05",
       title_jp: "",
-      url: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.eventbrite.com.au%2Fe%2Fmjc-nomikai-off-the-clock-tickets-1988065217583%3Faff%3Doddtdtcreator%26fbclid%3DIwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNDM3NjI2MzE2OTczNzg4AAEeBXdvXvW7vu6YgkPuTd01R3rPuoH_LcRqA2_0W8u5_sHab9UCLAhkWCFm8GE_aem_fqB4j1LwWg1Vt0c60rjuPQ%26utm_id%3D97758_v0_s00_e0_tv0&h=AT4YurspsjWvCViCmERzELO9l9etWwkbWubp9JSArFVJffTmL8uMMXFOC_lv1aS8B6eeOE91uHTsAdWhVbJtApJtoGWBAgAsbDWtHfvOFm0w-YTNmWCFrjUqH-rUBYc&s=1,
+      url: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.eventbrite.com.au%2Fe%2Fmjc-nomikai-off-the-clock-tickets-1988065217583%3Faff%3Doddtdtcreator%26fbclid%3DIwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNDM3NjI2MzE2OTczNzg4AAEeBXdvXvW7vu6YgkPuTd01R3rPuoH_LcRqA2_0W8u5_sHab9UCLAhkWCFm8GE_aem_fqB4j1LwWg1Vt0c60rjuPQ%26utm_id%3D97758_v0_s00_e0_tv0&h=AT4YurspsjWvCViCmERzELO9l9etWwkbWubp9JSArFVJffTmL8uMMXFOC_lv1aS8B6eeOE91uHTsAdWhVbJtApJtoGWBAgAsbDWtHfvOFm0w-YTNmWCFrjUqH-rUBYc&s=1",
       icon: <FaStar className="text-2xl" />,
     },
     {
