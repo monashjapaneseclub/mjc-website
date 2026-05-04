@@ -38,24 +38,6 @@ const LinksPage: React.FC = () => {
       icon: <FaStar className="text-2xl" />,
     },
     {
-      title_en: "Matcha Workshop SESSION 1 (16:00-17:00)",
-      title_jp: "",
-      url: "https://www.eventbrite.com.au/e/1987595968045?aff=oddtdtcreator",
-      icon: <FaStar className="text-2xl" />,
-    },
-    {
-      title_en: "Matcha Workshop SESSION 2 (17:30-18:30)",
-      title_jp: "",
-      url: "https://www.eventbrite.com.au/e/1987597004144?aff=oddtdtcreator",
-      icon: <FaStar className="text-2xl" />,
-    },
-    {
-      title_en: "Matcha Workshop SESSION 3 (19:00-20:00)",
-      title_jp: "",
-      url: "https://www.eventbrite.com.au/e/1987597286990?aff=oddtdtcreator",
-      icon: <FaStar className="text-2xl" />,
-    },
-    {
       title_en: "Club Sign-up",
       title_jp: "クラブ登録",
       url: "https://clubs.msa.monash.edu/organisation/7786/",
