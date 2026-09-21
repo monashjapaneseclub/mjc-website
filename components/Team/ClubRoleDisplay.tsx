@@ -59,8 +59,8 @@ const roles: RoleDetails[] = [
           jp: "専攻: 法学（優等）および文学",
         },
         description: {
-          en: "Establishes partnerships and secures resources for club activities.",
-          jp: "パートナーシップを築き、クラブ活動のための資源を確保します。",
+          en: "Handles all financial matters, including budgets, expenses, and financial reporting.",
+          jp: "予算、費用、財務報告など、全ての財務問題を処理します。",
         },
         linkedin: "https://www.linkedin.com/in/haruka-c-548036360/",
       },
@@ -76,8 +76,8 @@ const roles: RoleDetails[] = [
           jp: "専攻: 商学学士",
         },
         description: {
-          en: "Takes minutes during meetings, manages correspondence, and maintains club records.",
-          jp: "会議中の議事録を取り、通信を管理し、クラブの記録を維持します。",
+          en: "Assists the treasurer with financial tasks and ensures records are accurate.",
+          jp: "会計担当を補佐し、財務タスクをサポートし、記録の正確性を確保します。",
         },
         linkedin: "https://www.linkedin.com/in/miyu-cho-47b235356/",
       },
@@ -93,8 +93,8 @@ const roles: RoleDetails[] = [
           jp: "専攻: 土木工学学士（優等学位）",
         },
         description: {
-          en: "Develops marketing strategies to increase club visibility and engagement.",
-          jp: "クラブの認知度と参加を高めるためのマーケティング戦略を策定します。",
+          en: "Takes minutes during meetings, manages correspondence, and maintains club records.",
+          jp: "会議中の議事録を取り、通信を管理し、クラブの記録を維持します。",
         },
         linkedin: "https://www.linkedin.com/in/hugo-cheung-073252338/",
       },
