@@ -25,8 +25,8 @@ const roles: RoleDetails[] = [
           jp: "専攻: 文学士（言語学・日本語） ",
         },
         description: {
-          en: "Organizes workshops, training, and educational resources for members.",
-          jp: "メンバー向けにワークショップ、トレーニング、と教育リソースを企画します。",
+          en: "Oversees the club's operations and ensures its success by providing leadership and vision.",
+          jp: "クラブの運営を監督し、リーダーシップとビジョンを提供して成功を確実にします。",
         },
         linkedin: "https://www.linkedin.com/in/renji-chan-3a7b64313/",
       },
@@ -42,8 +42,8 @@ const roles: RoleDetails[] = [
           jp: "専攻: 理学士（心理学）および音楽学士",
         },
         description: {
-          en: "Organizes and coordinates events, ensuring they run smoothly.",
-          jp: "イベントを企画し、調整してスムーズに進行するようにします。",
+          en: "Assists the president and takes over their duties when necessary. Coordinates with all departments.",
+          jp: "会長を補佐し、必要に応じてその職務を引き継ぎます。全ての部署と調整します。",
         },
         linkedin: "https://www.linkedin.com/in/chihana-perera/",
       },
@@ -106,7 +106,7 @@ const roles: RoleDetails[] = [
       {
         name: { en: "Natsumi Mochizuki", jp: "望月　夏光" },
         degree: {
-          en: "Degree:Bachelor of Arts (Psychology Major, Japanese minor)",
+          en: "Degree: Bachelor of Arts (Psychology Major, Japanese minor)",
           jp: "専攻: 文学士（心理学専攻、日本語副専攻）",
         },
         description: {
@@ -185,7 +185,7 @@ const roles: RoleDetails[] = [
       {
         name: { en: "Solato Hiranuma", jp: "平沼　宙和" },
         degree: {
-          en: "Degrees: Computer Science",
+          en: "Degrees: Bachelor of Computer Science",
           jp: "専攻: コンピュータサイエンス",
         },
         description: {
@@ -212,7 +212,7 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
     <div className="flex flex-col w-full p-4 -mt-12 sm:-mt-24">
       {/* Title Header */}
       <h1 className="text-3xl font-bold text-center mb-8">
-        {language === "en" ? "2026 Executive Committee" : "2026年度役員委員会"}
+        {language === "en" ? "2026/2027 Executive Committee" : "2026/2027年度役員委員会"}
       </h1>
       {/* Mobile Role Selection Dropdown */}
       <div className="block md:hidden mb-6">
