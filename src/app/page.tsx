@@ -29,8 +29,8 @@ export default function Home() {
 
   const translations = {
     sponsorsHeading: {
-      en: "2025 Sponsors",
-      jp: "2025年のスポンサー",
+      en: "2026 Sponsors",
+      jp: "2026年のスポンサー",
     },
     followUsOnInstagram: {
       en: "Follow us on IG!",
@@ -59,7 +59,7 @@ export default function Home() {
       <BuyMembershipSection
         language={language}
         backgroundImage="/images/banner.png"
-        year="2025"
+        year="2026"
       />
 
       {/* Sponsors Section */}

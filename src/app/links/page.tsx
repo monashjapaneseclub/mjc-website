@@ -32,18 +32,6 @@ const LinksPage: React.FC = () => {
 
   const links = [
     {
-     title_en: "ACYA x MJC Calligraphy Night",
-      title_jp: "ACYA x MJC Calligraphy Night",
-      url: "https://docs.google.com/forms/d/e/1FAIpQLSc7DQK1mC1za2fZFTfZ_vgWABLTZDg0absTQN5JeWNZQYMTDg/viewform",
-      icon: <BsTicketDetailed className="text-2xl" />,
-    },
-    {
-     title_en: "Halloween Movie Night",
-      title_jp: "Halloween Movie Night",
-      url: "https://www.eventbrite.com.au/e/movie-night-tickets-1728960450249?aff=oddtdtcreator",
-      icon: <BsTicketDetailed className="text-2xl" />,
-    },
-    {
       title_en: "Club Sign-up",
       title_jp: "クラブ登録",
       url: "https://clubs.msa.monash.edu/organisation/7786/",
@@ -52,7 +40,7 @@ const LinksPage: React.FC = () => {
     {
       title_en: "MJC Website",
       title_jp: "MJCウェブサイト",
-      url: "https://www.monashjapaneseclub.com/",
+      url: "https://www.monashjapaneseclub.org/",
       icon: <CgWebsite className="text-2xl" />,
     },
     {

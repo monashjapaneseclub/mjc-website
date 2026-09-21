@@ -1,5 +1,5 @@
 import React from "react";
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@nextui-org/accordion";
 
 interface FAQProps {
   language: "en" | "jp";

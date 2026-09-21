@@ -11,7 +11,7 @@ interface BuyMembershipSectionProps {
 
 const BuyMembershipSection: React.FC<BuyMembershipSectionProps> = ({
   backgroundImage = "/images/banner.png",
-  year = "2025",
+  year = "2026",
   language = "en",
 }) => {
   const ref1 = useRef<HTMLDivElement>(null);

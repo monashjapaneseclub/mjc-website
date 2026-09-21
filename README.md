@@ -1,5 +1,5 @@
 ![logo](public/images/2logo.png)
-# Monash Japanese Club 2025 Website
+# Monash Japanese Club 2026 Website
 This is the official Monash Japanese Club website repository.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).

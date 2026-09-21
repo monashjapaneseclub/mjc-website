@@ -1,196 +1,116 @@
 "use client";
 
-import React, { useEffect } from "react";
-import Glide from "@glidejs/glide";
+import { sponsors } from "@/data/sponsors";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
-import "@glidejs/glide/dist/css/glide.core.min.css";
-import "@glidejs/glide/dist/css/glide.theme.min.css";
-import "./SponsorsCarousel.css";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-// import Link from "next/link";
+const VISIBLE_COUNT = 3;
 
-const SponsorsCarousel: React.FC = () => {
+const SponsorsCarousel = () => {
+  const maxPage = Math.max(sponsors.length - VISIBLE_COUNT, 0);
+  const [page, setPage] = useState(0);
+
+  const prev = () => setPage((p) => (p <= 0 ? maxPage : p - 1));
+  const next = () => setPage((p) => (p >= maxPage ? 0 : p + 1));
+
   useEffect(() => {
-    const glide = new Glide(".glide", {
-      type: "carousel",
-      startAt: 0,
-      perView: 3,
-      autoplay: 6000,
-      breakpoints: {
-        768: {
-          perView: 1,
-        },
-      },
-    });
-
-    glide.mount();
-
-    // Cleanup Glide instance
-    return () => {
-      glide.destroy();
-    };
-  }, []);
+    const interval = setInterval(next, 8000);
+    return () => clearInterval(interval);
+  }, [maxPage]);
 
   return (
-    <div className="glide carousel-container">
-      {/* Track for slides */}
-      <div className="glide__track" data-glide-el="track">
-        <ul className="glide__slides">
-          <li className="glide__slide">
-            <a
-              href="https://sulbingcafe.com.au/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="slide-content">
-                <img src="/images/sponsors/sulbing.png" alt="Sponsor 1" />
-                <p className="slide-caption font-roboto">Sulbing</p>
-              </div>
-            </a>
-          </li>
-          <li className="glide__slide">
-            <a
-              href="https://japaneasy.com.au/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="slide-content">
-                <img src="/images/sponsors/japaneasy.png" alt="Sponsor 1" />
-                <p className="slide-caption font-roboto">Japaneasy</p>
-              </div>
-            </a>
-          </li>
-          <li className="glide__slide">
-            <a
-              href="https://chahaus.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="slide-content">
-                <img src="/images/sponsors/chahaus.png" alt="Sponsor 2" />
-                <p className="slide-caption font-roboto">Cha Haus</p>
-              </div>
-            </a>
-          </li>
-          <li className="glide__slide">
-            <a
-              href="https://anotherdatenight.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="slide-content">
-                <img src="/images/sponsors/freedatenight.png" alt="Sponsor 3" />
-                <p className="slide-caption font-roboto">Another Date Night</p>
-              </div>
-            </a>
-          </li>
-          <li className="glide__slide">
-            <a
-              href="https://kbox.com.au/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="slide-content">
-                <img src="/images/sponsors/kbox.png" alt="Sponsor 4" />
-                <p className="slide-caption font-roboto">KBox Karaoke</p>
-              </div>
-            </a>
-          </li>
-          <li className="glide__slide">
-            <a
-              href="https://hareruya.com.au/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="slide-content">
-                <img src="/images/sponsors/hareruya.png" alt="Sponsor 5" />
-                <p className="slide-caption font-roboto">Hareruya Pantry</p>
-              </div>
-            </a>
-          </li>
-          <li className="glide__slide">
-            <a
-              href="https://mij.com.au/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="slide-content">
-                <img src="/images/sponsors/madeinjapan.png" alt="Sponsor 6" />
-                <p className="slide-caption font-roboto">Made in Japan</p>
-              </div>
-            </a>
-          </li>
-          <li className="glide__slide">
-            <a
-              href="https://www.kori-icecream.com.au/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="slide-content">
-                <img src="/images/sponsors/koori.png" alt="Sponsor 7" />
-                <p className="slide-caption font-roboto">K&#333;ri</p>
-              </div>
-            </a>
-          </li>
-          <li className="glide__slide">
-            <a
-              href="https://itoen.com.au/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="slide-content">
-                <img src="/images/sponsors/itoen.png" alt="Sponsor 8" />
-                <p className="slide-caption font-roboto">Ito En</p>
-              </div>
-            </a>
-          </li>
-          <li className="glide__slide">
-            <a
-              href="https://ediblecutlery.au/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="slide-content">
-                <img src="/images/sponsors/ediblecutlery.png" alt="Sponsor 9" />
-                <p className="slide-caption font-roboto">Edible Cutlery</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-      {/* Navigation Arrows */}
-      <div className="glide__arrows" data-glide-el="controls">
+    <section className="flex flex-col gap-10 p-12">
+      <div className="flex items-center gap-4">
+        {/* Left arrow */}
         <button
-          className="glide__arrow glide__arrow--left"
-          data-glide-dir="<"
-          aria-label="Previous"
+          onClick={prev}
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-200 transition hover:bg-gray-300"
+          aria-label="Previous sponsors"
         >
-          <ArrowBackIosNewIcon />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+              clipRule="evenodd"
+            />
+          </svg>
         </button>
+
+        {/* Sponsor cards */}
+        <div className="flex-1 overflow-hidden">
+          <div
+            className="grid gap-6 px-4 py-4 transition-transform duration-500 ease-in-out"
+            style={{
+              gridTemplateColumns: `repeat(${sponsors.length}, 1fr)`,
+              width: `${(sponsors.length / VISIBLE_COUNT) * 100}%`,
+              transform: `translateX(${-(page * (100 / sponsors.length))}%)`,
+            }}
+          >
+            {sponsors.map((sponsor, idx) => (
+              <a
+                key={idx}
+                href={sponsor.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative aspect-video overflow-hidden rounded-xl shadow-md transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <Image
+                  src={sponsor.image}
+                  alt={sponsor.name}
+                  fill
+                  sizes="(max-width: 768px) 80vw, 33vw"
+                  priority={idx < VISIBLE_COUNT}
+                  className="object-cover"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Right arrow */}
         <button
-          className="glide__arrow glide__arrow--right"
-          data-glide-dir=">"
-          aria-label="Next"
+          onClick={next}
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-200 transition hover:bg-gray-300"
+          aria-label="Next sponsors"
         >
-          <ArrowForwardIosIcon />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clipRule="evenodd"
+            />
+          </svg>
         </button>
       </div>
-      <div
-        className="glide__bullets mb-8 mt-2 relative"
-        data-glide-el="controls[nav]"
-      >
-        <button className="glide__bullet" data-glide-dir="=0"></button>
-        <button className="glide__bullet" data-glide-dir="=1"></button>
-        <button className="glide__bullet" data-glide-dir="=2"></button>
-        <button className="glide__bullet" data-glide-dir="=3"></button>
-        <button className="glide__bullet" data-glide-dir="=4"></button>
-        <button className="glide__bullet" data-glide-dir="=5"></button>
-        <button className="glide__bullet" data-glide-dir="=6"></button>
-        <button className="glide__bullet" data-glide-dir="=7"></button>
-        <button className="glide__bullet" data-glide-dir="=8"></button>
-      </div>
-    </div>
+
+      {/* Dots */}
+      {maxPage > 0 && (
+        <div className="mt-4 flex justify-center gap-2">
+          {Array.from({ length: maxPage + 1 }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setPage(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`h-3 w-3 rounded-full transition ${
+                i === page
+                  ? "bg-red-600 scale-110"
+                  : "bg-gray-300 hover:bg-gray-400"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </section>
   );
 };
 
