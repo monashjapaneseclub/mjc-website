@@ -106,8 +106,8 @@ const roles: RoleDetails[] = [
       {
         name: { en: "Natsumi Mochizuki", jp: "望月　夏光" },
         degree: {
-          en: "Degree: Bachelor of Arts (Psychology Major, Japanese minor)",
-          jp: "専攻: 文学士（心理学専攻、日本語副専攻）",
+          en: "Degree: Bachelor of Science (Pharmacology)",
+          jp: "専攻: 理学士（薬理学）",
         },
         description: {
           en: "Develops marketing strategies to increase club visibility and engagement.",
@@ -123,7 +123,7 @@ const roles: RoleDetails[] = [
       {
         name: { en: "Ethan Du", jp: "デュ イーサン" },
         degree: {
-          en: "Degrees: Bachelor of Biomedical science",
+          en: "Degrees: Bachelor of Biomedical Science",
           jp: "専攻: 生物医学科学の学士号",
         },
         description: {
