@@ -2,143 +2,199 @@
 import { useState, useEffect } from "react";
 import { FaLinkedin } from "react-icons/fa"; // Import LinkedIn icon from react-icons
 
-type RoleDetails = {
-  role: { en: string; jp: string };
+type Person = {
   name: { en: string; jp: string };
   degree: { en: string; jp: string; studyAbroad?: { en: string; jp: string } };
   description: { en: string; jp: string };
   linkedin?: string;
 };
 
+type RoleDetails = {
+  role: { en: string; jp: string };
+  people: Person[];
+};
+
 const roles: RoleDetails[] = [
   {
     role: { en: "President", jp: "会長" },
-    name: { en: "Sara Ando", jp: "安藤紗楽" },
-    degree: {
-      en: "Degrees: Secondary and Primary Education (Special and Inclusive Education)",
-      jp: "専攻: 中等と初等教育（特別支援教育とインクルーシブ教育）",
-    },
-    description: {
-      en: "Organizes workshops, training, and educational resources for members.",
-      jp: "メンバー向けにワークショップ、トレーニング、と教育リソースを企画します。",
-    },
+    people: [
+      {
+        name: { en: "Renji Chan", jp: "チャン 連治" },
+        degree: {
+          en: "Degrees: Bachelor of Arts (Linguistics and Japanese) ",
+          jp: "専攻: 文学士（言語学・日本語） ",
+        },
+        description: {
+          en: "Organizes workshops, training, and educational resources for members.",
+          jp: "メンバー向けにワークショップ、トレーニング、と教育リソースを企画します。",
+        },
+        linkedin: "https://www.linkedin.com/in/renji-chan-3a7b64313/",
+      },
+    ],
   },
   {
     role: { en: "Vice President", jp: "副会長" },
-    name: { en: "Teruki Yamashita", jp: "山下照生" },
-    degree: {
-      en: "Degrees: Radiography and Medical Imaging",
-      jp: "専攻: 放射線撮影と医療画像学",
-    },
-    description: {
-      en: "Organizes and coordinates events, ensuring they run smoothly.",
-      jp: "イベントを企画し、調整してスムーズに進行するようにします。",
-    },
-    linkedin: "https://www.linkedin.com/in/teruki-yamashita-4284a0278/",
+    people: [
+      {
+        name: { en: "Chihana Perera ", jp: "ペレーラ 千花" },
+        degree: {
+          en: "Degrees: Bachelor of Science (Psychology) and Music",
+          jp: "専攻: 理学士（心理学）および音楽学士",
+        },
+        description: {
+          en: "Organizes and coordinates events, ensuring they run smoothly.",
+          jp: "イベントを企画し、調整してスムーズに進行するようにします。",
+        },
+        linkedin: "https://www.linkedin.com/in/chihana-perera/",
+      },
+    ],
   },
   {
     role: { en: "Treasurer", jp: "会計担当" },
-    name: { en: "Konon Kuboi", jp: "久保井このん" },
-    degree: {
-      en: "Degrees: Arts and Global Studies",
-      jp: "専攻: 文学と国際学",
-    },
-    description: {
-      en: "Establishes partnerships and secures resources for club activities.",
-      jp: "パートナーシップを築き、クラブ活動のための資源を確保します。",
-    },
-    linkedin: "https://www.linkedin.com/in/konon-kuboi-5a40a7295/",
+    people: [
+      {
+        name: { en: "Haruka Cooper", jp: "クーパー 遥" },
+        degree: {
+          en: "Degrees: Bachelor of Laws (Honours) and Arts",
+          jp: "専攻: 法学（優等）および文学",
+        },
+        description: {
+          en: "Establishes partnerships and secures resources for club activities.",
+          jp: "パートナーシップを築き、クラブ活動のための資源を確保します。",
+        },
+        linkedin: "https://www.linkedin.com/in/haruka-c-548036360/",
+      },
+    ],
   },
   {
     role: { en: "Assistant Treasurer", jp: "会計補佐" },
-    name: { en: "Lin Nakayama", jp: "中山凛音" },
-    degree: {
-      en: "Degrees: Science",
-      jp: "専攻: 理学",
-    },
-    description: {
-      en: "Takes minutes during meetings, manages correspondence, and maintains club records.",
-      jp: "会議中の議事録を取り、通信を管理し、クラブの記録を維持します。",
-    },
-    linkedin: "https://www.linkedin.com/in/lin-nakayama-51525829a/",
+    people: [
+      {
+        name: { en: "Miyu Cho", jp: "趙 美柚" },
+        degree: {
+          en: "Degrees: Bachelor of Commerce",
+          jp: "専攻: 商学学士",
+        },
+        description: {
+          en: "Takes minutes during meetings, manages correspondence, and maintains club records.",
+          jp: "会議中の議事録を取り、通信を管理し、クラブの記録を維持します。",
+        },
+        linkedin: "https://www.linkedin.com/in/miyu-cho-47b235356/",
+      },
+    ],
   },
   {
     role: { en: "Secretary", jp: "書記" },
-    name: { en: "Chinatsu Kanasaka", jp: "金坂知夏" },
-    degree: {
-      en: "Degrees: Secondary Education and Arts",
-      jp: "専攻: 中等教育と文学",
-    },
-    description: {
-      en: "Develops marketing strategies to increase club visibility and engagement.",
-      jp: "クラブの認知度と参加を高めるためのマーケティング戦略を策定します。",
-    },
-    linkedin: "https://www.linkedin.com/in/chinatsu-kanasaka/",
+    people: [
+      {
+        name: { en: "Hugo Cheung", jp: "チュン　ヒューゴ" },
+        degree: {
+          en: "Degrees: Bachelor of Civil Engineering(Honours)",
+          jp: "専攻: 土木工学学士（優等学位）",
+        },
+        description: {
+          en: "Develops marketing strategies to increase club visibility and engagement.",
+          jp: "クラブの認知度と参加を高めるためのマーケティング戦略を策定します。",
+        },
+        linkedin: "https://www.linkedin.com/in/hugo-cheung-073252338/",
+      },
+    ],
   },
   {
     role: { en: "Marketing Director", jp: "マーケティング担当" },
-    name: { en: "Akihiro Kobayashi", jp: "小林　士洸" },
-    degree: {
-      en: "Degrees: Arts and Global Studies",
-      jp: "専攻: 文学士（アーツ）・グローバルスタディーズ学士",
-    },
-    description: {
-      en: "Develops marketing strategies to increase club visibility and engagement.",
-      jp: "クラブの認知度と参加を高めるためのマーケティング戦略を策定します。",
-    },
-    linkedin: "https://www.linkedin.com/in/akihiro-kobayashi-78783937b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    people: [
+      {
+        name: { en: "Natsumi Mochizuki", jp: "望月　夏光" },
+        degree: {
+          en: "Degree:Bachelor of Arts (Psychology Major, Japanese minor)",
+          jp: "専攻: 文学士（心理学専攻、日本語副専攻）",
+        },
+        description: {
+          en: "Develops marketing strategies to increase club visibility and engagement.",
+          jp: "クラブの認知度と参加を高めるためのマーケティング戦略を策定します。",
+        },
+        linkedin: "https://www.linkedin.com/in/natsumi-mochizuki-013b81384/",
+      },
+    ],
   },
   {
     role: { en: "Events Director", jp: "イベント担当" },
-    name: { en: "Hugo Mukai", jp: "迎　彪剛" },
-    degree: {
-      en: "Degrees: Engineering - Software Engineering (Honours)",
-      jp: "専攻: 工学（優等）",
-    },
-    description: {
-      en: "Organizes and coordinates events, ensuring they run smoothly.",
-      jp: "イベントを企画し、調整してスムーズに進行するようにします。",
-    },
-    linkedin: "https://www.linkedin.com/in/hugo-mukai-b7220635a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    people: [
+      {
+        name: { en: "Ethan Du", jp: "デュ イーサン" },
+        degree: {
+          en: "Degrees: Bachelor of Biomedical science",
+          jp: "専攻: 生物医学科学の学士号",
+        },
+        description: {
+          en: "Organizes and coordinates events, ensuring they run smoothly.",
+          jp: "イベントを企画し、調整してスムーズに進行するようにします。",
+        },
+      },
+    ],
   },
   {
     role: { en: "Sponsorship Director", jp: "スポンサーシップ担当" },
-    name: { en: "Shuya Ooka", jp: "大岡　修也" },
-    degree: {
-      en: "Degrees: Law (Honours) and Commerce (Finance)",
-      jp: "専攻: 法律・ファイナンス",
-    },
-    description: {
-      en: "Establishes partnerships and secures resources for club activities.",
-      jp: "パートナーシップを築き、クラブ活動のための資源を確保します。",
-    },
-    linkedin: "https://www.linkedin.com/in/konon-kuboi-5a40a7295/",
+    people: [
+      {
+        name: { en: "Sophia David", jp: "デービッド ソフィア" },
+        degree: {
+          en: "Degrees: Bachelor of Commerce (Finance) and Arts (Japanese Studies)",
+          jp: "専攻: 商学（金融）および文学（日本学）の学士号",
+        },
+        description: {
+          en: "Establishes partnerships and secures resources for club activities.",
+          jp: "パートナーシップを築き、クラブ活動のための資源を確保します。",
+        },
+        linkedin: "https://www.linkedin.com/in/sophia-david-280b963b7/",
+      },
+    ],
   },
   {
-    role: { en: "Education Director", jp: "教育担当" },
-    name: { en: "Chihana Perera", jp: "ペレラ・チハナ" },
-    degree: {
-      en: "Degrees: Science and Music",
-      jp: "専攻: 理学と音楽",
-    },
-    description: {
-      en: "Organizes workshops, training, and educational resources for members.",
-      jp: "メンバー向けにワークショップ、トレーニング、と教育リソースを企画します。",
-    },
-    linkedin: "http://www.linkedin.com/in/chihana-perera-3740663b1",
+    role: { en: "Education Co-Directors", jp: "教育部門 共同ディレクター" },
+    people: [
+      {
+        name: { en: "Mia Kurata-Hsu", jp: "倉田美亜" },
+        degree: {
+          en: "Degrees: Bachelor of Arts (Psychology Major, Japanese minor)",
+          jp: "専攻: 文学士（心理学専攻、日本語副専攻）",
+        },
+        description: {
+          en: "Organizes workshops, training, and educational resources for members.",
+          jp: "メンバー向けにワークショップ、トレーニング、と教育リソースを企画します。",
+        },
+        linkedin: "https://www.linkedin.com/in/mia-kurata-hsu/",
+      },
+      {
+        name: { en: "Sara Ando", jp: "安藤紗楽" },
+        degree: {
+          en: "Degrees: Bachelor of Education(Honours) in Primary and Secondary Inclusive and Special Education",
+          jp: "専攻: 教育学学士（名誉学士課程）初等・中等包括・特別支援教育専攻",
+        },
+        description: {
+          en: "Organizes workshops, training, and educational resources for members.",
+          jp: "メンバー向けにワークショップ、トレーニング、と教育リソースを企画します。",
+        },
+        linkedin: "https://www.linkedin.com/in/sara-ando-86331a411/",
+      },
+    ],
   },
   {
     role: { en: "IT Director", jp: "IT担当" },
-    name: { en: "Jin Heng Pang", jp: "パング・ジンヘン" },
-    degree: {
-      en: "Degrees: Computer Science",
-      jp: "専攻: コンピュータサイエンス",
-    },
-    description: {
-      en: "Oversees the club's technology infrastructure and leads the development and maintenance of the club's website.",
-      jp: "クラブの技術基盤を監督し、ウェブサイトの開発と維持を主導します。",
-    },
-    linkedin: "https://www.linkedin.com/in/jin-heng-pang",
+    people: [
+      {
+        name: { en: "Solato Hiranuma", jp: "平沼　宙和" },
+        degree: {
+          en: "Degrees: Computer Science",
+          jp: "専攻: コンピュータサイエンス",
+        },
+        description: {
+          en: "Oversees the club's technology infrastructure and leads the development and maintenance of the club's website.",
+          jp: "クラブの技術基盤を監督し、ウェブサイトの開発と維持を主導します。",
+        },
+        linkedin: "https://www.linkedin.com/in/solato-hiranuma-3120042b5/",
+      },
+    ],
   },
 ];
 
@@ -197,43 +253,44 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
         </div>
 
         {/* Content Section */}
-        <div className="flex flex-col md:flex-row flex-1 gap-8">
-            {/* Text Content */}
-            <div className="flex-1">
-            <h3 className="text-xl font-semibold text-gray-800">
-              {language === "en" ? selectedRole.role.en : selectedRole.role.jp}
-            </h3>
-            <h2 className="text-2xl font-bold mt-2 flex items-center">
-              {language === "en" ? selectedRole.name.en : selectedRole.name.jp}
-              {selectedRole.linkedin && (
-                <a
-                  href={selectedRole.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ml-2 text-blue-600 hover:text-red-500"
-                >
-                  <FaLinkedin size={20} />
-                </a>
-              )}
-            </h2>
-            <p className="text-sm text-gray-700 italic mt-2">
-              {language === "en"
-                ? selectedRole.degree.en
-                : selectedRole.degree.jp}
-            </p>
-            {selectedRole.degree.studyAbroad && (
-              <p className="text-sm text-gray-700 font-bold mt-1">
-                {language === "en"
-                  ? selectedRole.degree.studyAbroad.en
-                  : selectedRole.degree.studyAbroad.jp}
-              </p>
-            )}
+        <div className="flex flex-col flex-1">
+          <h3 className="text-xl font-semibold text-gray-800">
+            {language === "en" ? selectedRole.role.en : selectedRole.role.jp}
+          </h3>
+          <div className="flex flex-col md:flex-row gap-8 mt-2">
+            {selectedRole.people.map((person) => (
+              <div key={person.name.en} className="flex-1">
+                <h2 className="text-2xl font-bold flex items-center">
+                  {language === "en" ? person.name.en : person.name.jp}
+                  {person.linkedin && (
+                    <a
+                      href={person.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-2 text-blue-600 hover:text-red-500"
+                    >
+                      <FaLinkedin size={20} />
+                    </a>
+                  )}
+                </h2>
+                <p className="text-sm text-gray-700 italic mt-2">
+                  {language === "en" ? person.degree.en : person.degree.jp}
+                </p>
+                {person.degree.studyAbroad && (
+                  <p className="text-sm text-gray-700 font-bold mt-1">
+                    {language === "en"
+                      ? person.degree.studyAbroad.en
+                      : person.degree.studyAbroad.jp}
+                  </p>
+                )}
 
-            <p className="mt-4 text-gray-600">
-              {language === "en"
-                ? selectedRole.description.en
-                : selectedRole.description.jp}
-            </p>
+                <p className="mt-4 text-gray-600">
+                  {language === "en"
+                    ? person.description.en
+                    : person.description.jp}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -248,6 +305,52 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
 
           {/* Committees Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+              {/* 2026 */}
+              <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+                <h3 className="text-xl font-bold mb-4 text-center">2026</h3>
+                <ul className="text-gray-700">
+                  <li>
+                    <span className="font-semibold">President:</span> Sara Ando
+                  </li>
+                  <li>
+                    <span className="font-semibold">Vice President:</span> Teruki Yamashita
+                  </li>
+                  <li>
+                    <span className="font-semibold">Treasurer:</span> Konon Kuboi
+                  </li>
+                  <li>
+                    <span className="font-semibold">Secretary:</span> Chinatsu Kanasaka
+                  </li>
+                  <li>
+                    <span className="font-semibold">Assistant Treasurer:</span>{" "}
+                    Lin Nakayama
+                  </li>
+                  <li>
+                    <span className="font-semibold">Marketing Director:</span>{" "}
+                    Akihiro Kobayashi
+                  </li>
+                  <li>
+                    <span className="font-semibold">Events Director:</span> Hugo Mukai
+                  </li>
+                  <li>
+                    <span className="font-semibold">Education Co-Director:</span>{" "}
+                    Chihana Perera
+                  </li>
+                  <li>
+                    <span className="font-semibold">Education Co-Director:</span>{" "}
+                    Renji Chan
+                  </li>
+                  <li>
+                    <span className="font-semibold">Sponsorship Director:</span>{" "}
+                    Konon Kuboi
+                  </li>
+                  <li>
+                    <span className="font-semibold">IT Director:</span> Jin Heng Pang
+                  </li>
+                </ul>
+              </div>
+
             {/* 2025 */}
             <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
               <h3 className="text-xl font-bold mb-4 text-center">2025</h3>
