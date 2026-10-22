@@ -86,7 +86,19 @@ export const sponsors: Sponsor[] = [
     image: "/images/sponsors/chahaus.png",
     name: "CHA HAUS",
     link: "https://chahaus.com/",
-    caption: "Pending",
+    caption: "10% discount and more in T&C",
+  },
+  {
+    image: "/images/sponsors/kome.png",
+    name: "Kome Eatry",
+    link: "https://www.instagram.com/komemelbourne",
+    caption: "10% discount",
+  },
+  {
+    image: "/images/sponsors/yapparisteak.png",
+    name: "Yappari Steak",
+    link: "https://www.instagram.com/yappari_steak_mel_central/?hl=en",
+    caption: "15% discount",
   },
   {
     image: "/images/sponsors/madeinjapan.png",
